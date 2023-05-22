@@ -1,0 +1,288 @@
+<x-main>
+	<table class="w-640 sm:w-full" align="center">
+		<tr>
+			<td>
+				<table class="w-580 sm:w-full" style="background-color: {{page.brand.color.primary.value}}" align="center">
+					<tr>
+						<td class="pt-10 px-40 pb-0 sm:px-10pc">
+							<table class="w-full" align="center">
+								<tr>
+									<td>
+										<p style="color: {{page.brand.text.color.value}}" class="text-12 leading-[17px] sm:text-center" style=" font-weight: 400;">
+											<a class="line" style="color: {{page.brand.text.color.value}};" href="{$viewInBrowserLink}"> Version web </a> | <a class="line" style="color: {{page.brand.text.color.value}};" href="{$unsubscribeLink}"> Se d&#233;sinscrire </a>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="pt-30" align="left">
+										<a href="{{page.brand.header.logo_link}}">
+											<img alt="{{page.brand.name}}" src="{{page.brand.header.logo_url}}" width="180" />
+										</a>
+											<if condition="page.brand.id === 'badsender'">
+												<p style="color: {{page.brand.text.color.value}}" class="text-12 leading-[17px] font-bold mt-5">
+													<a class="no-line" style="color: {{page.brand.text.color.value}};" href="https://www.badsender.com/"> AGITATEUR D'EXPERTISE</a>
+												</p>
+											</if>
+										</td>
+									</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="w-580 m-auto sm:w-full" align="center" style="background-color: {{page.brand.color.primary.value}}">
+		<tr>
+			<td class="pt-80 px-40 pb-60 sm:px-10pc">
+				<table class="w-full" align="center">
+					<tr>
+						<td>
+							<h1 style="color: {{page.brand.title.color.value}};" class="text-50 leading-50 sm:text-38 sm:leading-38 font-montserrat_black font-black">
+								Sous les tropiques
+							</h1>
+						</td>
+					</tr>
+					<tr>
+						<td class="pt-20">
+							<p style="color: {{page.brand.text.color.value}}" class="text-18 leading-25">
+								{{{page.brand.edito.copy}}}
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pt-30" align="left">
+							<table>
+								<tr>
+									<td class="bg-black py-20 px-40 rounded-[50px]">
+										<p style="color: {{page.brand.text.color.value}}" class="font-montserrat_bold font-bold text-18 leading-29">
+											<a href="https://www.badsender.com/blog/" class="no-line" style="color: {{page.brand.color.primary.value}}">
+												Lire nos derni&#232;res actus
+											</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="w-580 sm:w-full" align="center">
+		<tr>
+			<td class="pb-40">
+				<each loop="item, index in page.brand.articles">
+					<x-article tag="{{item.tag}}" image="{{item.image}}" href="{{item.href}}">	
+						<fill:title>
+							{{{item.titre}}}
+						</fill:title>
+						{{{item.copy}}}
+						<fill:cta>
+							{{{item.cta}}}
+						</fill:cta>
+					</x-article>
+				</each>
+				<if condition="page.brand.id === 'badsender'">
+					<table class="w-full" align="center">
+						<tr>
+							<td class="pt-40 px-40 sm:px-10pc">
+								<h1 style="color: {{page.brand.title.color.value}};" class="text-34 leading-34">Branchez vos &#233;couteurs...</h1>
+							</td>
+						</tr>
+					</table>
+					<table class="w-full" align="center">
+						<tr>
+							<td class="pt-40 px-40 sm:px-10pc">
+								<table class="w-full">
+									<tr>
+										<th class="w-[180px] sm:block sm:pb-20 sm:w-full" valign="top">
+											<img alt="" class="m-auto rounded-10" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/cover-180xnull-1d4253c94d8d159317dc51fc63677b97.png" width="180" />
+										</th>
+										<th class="w-20 sm:hidden">&nbsp;</th>
+										<th class="sm:block" valign="top" align="left">
+											<table class="w-full">
+												<tr>
+													<td class="pb-5">
+														<h2 style="color: {{page.brand.title.color.value}};">Musique et Emailing : Comment les newsletter de Badsender ont influencé les chansons de Coldplay</h2>
+													</td>
+												</tr>
+											</table>
+											<audio controls="controls" class="pb-5 w-[300px] sm:w-full">
+												<source src="https://live.lepatron.email/podcats/27_le_pari_de_kiliba.mp3" />
+												<source src="https://live.lepatron.email/podcats/27_le_pari_de_kiliba.ogg" />
+											</audio>
+											<table>
+												<tr>
+													<td class="pb-5">
+														<p style="color: {{page.brand.text.color.value}}" class="text-16 leading-m"> &#201;couter sur </p>
+													</td>
+												</tr>
+											</table>
+											<table>
+												<tr>
+													<td>
+														<a href="https://open.spotify.com/episode/20AUFrnmNlFmXqLxX2FhxT?si=XHs6k9kGT3OWyZowkJCeOQ">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-spotify.png" alt="Spotify" width="40" />
+														</a>
+													</td>
+													<td class="w-5">&nbsp;</td>
+													<td>
+														<a href="https://soundcloud.com/badsender/live-ia-et-emailing-de-temps-dargent-co2-le-pari-de-kiliba">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-soundcloud.png" alt="SoundCloud" width="40" />
+														</a>
+													</td>
+													<td class="w-5">&nbsp;</td>
+													<td>
+														<a href="https://deezer.page.link/kqbngZeqVXpwPZHT9">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-deezer.png" alt="Deezer" width="40" />
+														</a>
+													</td>
+													<td class="w-5">&nbsp;</td>
+													<td>
+														<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjcwMjM3NjE3OC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTQ2NzgwOTk0Nw?sa=X&amp;ved=0CAUQkfYCahcKEwigg971sKn-AhUAAAAAHQAAAAAQEw">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-google_podcast.png" alt="Google podcast" width="40" />
+														</a>
+													</td>
+													<td class="w-5">&nbsp;</td>
+													<td>
+														<a href="https://podcasts.apple.com/fr/podcast/live-ia-et-emailing-de-temps-dargent-co2-le-pari-de-kiliba/id1504855049?i=1000603918449">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-apple_podcast.png" alt="Apple podcast" width="40" />
+														</a>
+													</td>
+													<td class="w-5">&nbsp;</td>
+													<td>
+														<a href="https://podcastaddict.com/episode/155605288">
+															<img src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-addict_podcast.png" alt="Addict" width="40" />
+														</a>
+													</td>
+												</tr>
+											</table>
+										</th>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</if>
+				<table class="w-full" align="center">
+					<tr>
+						<td class="pt-40 px-40 sm:px-10pc">
+							<table class="w-full" align="center">
+								<tr>
+									<td style="border: 1px solid #E9E9E9;" class="p-40 sm:p-20">
+										<table class="w-full" align="center">
+											<tr>
+												<td class="w-30" valign="top">
+													<img alt="" class="block" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/cover-30xnull-74266c72e77785935b80bf0440b31d28.png" width="30" />
+												</td>
+												<td class="pl-20">
+													<table class="w-full" align="center">
+														<tr>
+															<td>
+																<h1 style="color: {{page.brand.title.color.value}};" class="text-22 leading-22">Vous pouvez agir !<br /></h1>
+															</td>
+														</tr>
+														<tr>
+															<td class="pt-10">
+																<p style="color: {{page.brand.text.color.value}}">
+																	L'envoi de cet email est responsable de l'&#233;mission de <a href="https://www.sami.eco/post/empreinte-carbone-email" class="line" style="color: {{page.brand.text.color.value}}">quelques grammes de CO2</a> . <strong>R&#233;duire l&#8217;impact environnemental de ses emails, c&#8217;est surtout allonger la dur&#233;e de vie de ses appareils num&#233;riques</strong>. <br />Tout est une question d&#8217;&#233;chelle. Si vous envoyez des millions d'emails par an, vous pouvez faire une diff&#233;rence : <br />1. Prendre conscience de l'impact de vos envois en mesurant <a href="https://www.badsender.com/agence/strategie/bilan-carbone-emailing/" class="line" style="color: {{page.brand.text.color.value}}">le bilan carbone de vos emailing</a><br />2. R&#233;duire le volume d&#8217;emails envoy&#233;s, <a href="https://www.badsender.com/guides/eco-conception-email/" class="line" style="color: {{page.brand.text.color.value}}">all&#233;ger le poids de vos emails</a>, opter pour des serveurs d'envoi en France<br />3. Prendre conscience des cons&#233;quences de vos messages en mesurant l'ombre climatique de votre activit&#233;<br />4. Militer pour la mise en place <a href="https://www.zerocarbon.email/fr/accueil/" class="line" style="color: {{page.brand.text.color.value}}">des dates d&#8217;expiration dans les emails</a>, <br />C&#8217;est tout le syst&#232;me qu&#8217;il faut faire &#233;voluer pour limiter la casse.
+																</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!-- FOOTER -->
+				<table class="w-full" align="center">
+					<tr>
+						<td class="pt-40 px-40 sm:px-10pc">
+							<table class="w-full" align="center">
+								<tr>
+									<th class="align-top sm:block sm:w-full">
+										<a href="{{page.brand.header.logo_link}}">
+											<img alt="{{page.brand.name}}" src="{{page.brand.footer.logo_url}}" class="block sm:m-auto" width="136" />
+										</a>
+										<if condition="page.brand.id === 'badsender'">
+											<p style="color: {{page.brand.text.color.value}}" class="mt-15 text-18 leading-22 sm:text-center"> Agitateur d'expertise <br /> emailing et eCRM </p>
+										</if>
+									</th>
+									<th class="align-top sm:block sm:w-full sm:pt-20" align="right">
+										<table class="sm:m-auto">
+											<tr>
+												<td>
+													<a href="https://www.facebook.com/Badsender/">
+														<img alt="Facebook" class="inline" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-picto_facebook.png" width="40" />
+													</a>
+												</td>
+												<td class="w-10">&nbsp;</td>
+												<td>
+													<a href="https://twitter.com/Badsender">
+														<img alt="Twitter" class="inline" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-picto_twitter.png" width="40" />
+													</a>
+												</td>
+												<td style="width: 10px;">&nbsp;</td>
+												<td>
+													<a href="https://www.youtube.com/channel/UCgRBfIEah50OIsdXlYclZxw">
+														<img alt="Youtube" class="inline" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-picto_youtube.png" width="40" />
+													</a>
+												</td>
+												<td style="width: 10px;">&nbsp;</td>
+												<td>
+													<a href="https://www.linkedin.com/company/badsender/">
+														<img alt="Linkedin" class="inline" src="https://live.lepatron.email/test/gvg/emday_2023/badsender/template_newsletter-picto_linkedin.png" width="40" />
+													</a>
+												</td>
+											</tr>
+										</table>
+									</th>
+								</tr>
+							</table>
+							<if condition="page.brand.id === 'badsender'">
+								<table class="w-full" align="center">
+									<tr>
+										<td class="pt-40">
+											<p style="color: {{page.brand.text.color.value}}" class="text-16 leading-[120%] font-bold sm:text-center"> Cet email a &#233;t&#233; produit par notre email builder Le Patron </p>
+										</td>
+									</tr>
+									<tr>
+										<td class="pt-10 pb-40" align="left">
+											<table class="sm:m-auto">
+												<tr>
+													<td class="py-20 px-30 rounded-50" style="border: 1px solid #141414;">
+														<p style="color: {{page.brand.text.color.value}}" class="text-center text-16 leading-16 text-center font-montserrat_bold font-bold">
+															<a href="https://lepatron.email/" class="text-black line"> Toi aussi, industrialise tes emails </a>
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</if>
+							<hr style="border-width: 0; background: #DDDCDC; color: #DDDCDC; height: 1px;" />
+							<table class="w-full" align="center">
+								<tr>
+									<td class="pt-40">
+										<p style="color: {{page.brand.text.color.value}}" style="font-size: 14px; line-height: 20px; color: #444444; font-weight: 400;">
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium voluptatum hic libero inventore eum sed, ipsa magnam. Ipsum voluptatibus ipsam dignissimos enim autem corporis, ut quas culpa ex. Quisquam, debitis!<br>
+											<br>
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium voluptatum hic libero inventore eum sed, ipsa magnam. Ipsum voluptatibus ipsam dignissimos enim autem corporis, ut quas culpa ex. Quisquam, debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium voluptatum hic libero inventore eum sed, ipsa magnam. Ipsum voluptatibus ipsam dignissimos enim autem corporis, ut quas culpa ex. Quisquam, debitis!
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</x-main>

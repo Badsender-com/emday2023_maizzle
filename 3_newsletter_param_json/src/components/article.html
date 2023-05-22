@@ -1,0 +1,89 @@
+<script props>
+  module.exports = {
+    href: props.href || '#toreplace',
+    image: props.image || 'https://via.placeholder.com/230x175',
+	tag: props.tag || 'tag',
+  }
+</script>
+
+<table class="w-full" align="center">
+	<tr>
+		<td class="pt-40 px-40 sm:px-10pc">
+			<h2 style="color: {{page.brand.title.color.value}};" class="mb-20">
+				<slot:title />
+			</h2>
+			<table>
+				<tr>
+					<th class="align-top sm:block sm:w-full sm:pb-10">
+						<table class="w-full" align="center">
+							<tr>
+								<td class="align-top">
+									<div class="faux-absolute max-w-220 text-left ml-10">
+										<!--[if mso]>
+										<table border="0" cellpadding="0" cellspacing="0" style="width: 230px;">
+											<tr>
+											<td style="position: relative;">
+											<v:rect xmlns:v="urn:schemas-microsoft-com:vml" stroked="false" filled="false" style="position: absolute; left: 10px;">
+											<v:textbox inset="0,0,0,0">
+												<![endif]-->
+										<div class="inline-block text-center">
+											<table class="w-220" style="width: 220px;">
+												<tr>
+													<td class="pt-10" align="left">
+														<table>
+															<tr>
+																<td class="py-3 px-5 rounded-2" style="background-color: {{page.brand.color.primary.value}}">
+																	<p style="color: {{page.brand.text.color.value}};" class="font-montserrat_bold text-12 leading-14 uppercase">
+																		{{{tag}}}
+																	</p>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if mso]>
+											</v:textbox>
+											</v:rect>
+											</td>
+											</tr>
+										</table>
+										<![endif]-->
+									</div>
+									<table class="sm:m-auto sm:w-full">
+										<tr>
+											<td valign="top" align="left">
+												<img alt="Et on n'est pas peu fiers" class="rounded-10 sm:w-full block" src="{{image}}" width="230" height="175" />
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</th>
+					<th class="align-top pl-20 sm:block sm:w-full sm:pl-0" valign="top" align="left">
+						<table class="w-full" align="center">
+							<tr>
+								<td class="sm:pb-10">
+									<p style="color: {{page.brand.text.color.value}};" class="text-grey">
+										<content />
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="pt-20">
+									<p class="font-montserrat_bold font-bold text-14 leading-14 sm:text-enter">
+										<a href="{{href}}" class="line" style="color: {{page.brand.text.color.value}};">
+											<slot:cta />
+										</a>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</th>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
