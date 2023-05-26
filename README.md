@@ -2,6 +2,9 @@
 
 Ce répertoire Github présente 3 projets Maizzle différents. Chaque projet est basé sur le précédent en ajoutant une couche d'abstraction supplémentaire pour montrer une petite partie des capacités de Maizzle.
 
+Attention, il est nécessaire, pour chacun des 3 projets, d'installer la librairie node. Le détail pour faire cela est disponible sur la documentation de Maizzle ici: 
+https://maizzle.com/docs/installation/
+
 ## 1_newsletter_simple
 Il s'agit d'une newsletter classique, où le code a été réduit grâce à l'écriture Maizzle. Idéal pour voir comment peut s'écrire le code dans Maizzle sans s'encombrer de trop de complexité.
 Ce qui a été fait:
